@@ -11,5 +11,5 @@ foreach(sample_filename ${samples_list})
   set_target_properties(${sample} PROPERTIES
     OUTPUT_NAME "${sample}"
     PROJECT_LABEL "${sample}"
-    RUNTIME_OUTPUT_DIRECTORY "../bin/medium")
+    RUNTIME_OUTPUT_DIRECTORY "../bin/easy")
 endforeach()
