@@ -3,17 +3,4 @@ CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
 set(PROJECT_NAME cpp-practice-hackerrank)
 project(${PROJECT_NAME})
 
-# get all cpp-files in current directory
-file(GLOB samples_list RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} *.cpp)
-
-
-foreach(sample_filename ${samples_list})
-  # get file name without extension
-  get_filename_component(sample ${sample_filename} NAME_WE)
-
-  # add and configure executable file to be produced 
-  add_executable(${sample} ${sample_filename})
-  set_target_properties(${sample} PROPERTIES
-    OUTPUT_NAME "${sample}"
-    PROJECT_LABEL "${sample}")
-endforeach()
+add_subdirectory(medium)
